@@ -4,10 +4,10 @@ const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
 const delBtn = document.getElementById("del-btn")
 const saveBtn = document.getElementById("save-btn")
-const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
+const sitesFromLocalStorage = JSON.parse(localStorage.getItem("mySites"))
 
-if (leadsFromLocalStorage) {
-    mySites = leadsFromLocalStorage
+if (sitesFromLocalStorage) {
+    mySites = sitesFromLocalStorage
     render(mySites)
 }
 
@@ -28,7 +28,7 @@ function render(sites) {
 inputBtn.addEventListener("click", function() {
     mySites.push(inputEl.value)
     inputEl.value = ""
-    localStorage.setItem("myLeads", JSON.stringify(mySites))
+    localStorage.setItem("mySites", JSON.stringify(mySites))
     render(mySites)
 })
 
@@ -44,7 +44,7 @@ inputEl.addEventListener("keypress", (event)=> {
 saveBtn.addEventListener("click", function() {
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
         mySites.push(tabs[0].url)
-        localStorage.setItem("myLeads", JSON.stringify(mySites))
+        localStorage.setItem("mySites", JSON.stringify(mySites))
         render(mySites)
     })
 })
