@@ -2,38 +2,66 @@ body {
     margin: 0;
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
+    min-width: 400px;
+    background-color: #424242;
+}
+
+h4 {
+    color: #810202;
+    text-shadow:
+            0 0 7px #fff,
+            0 0 10px #fff,
+            0 0 21px #fff,
+            0 0 42px #000000,
+            0 0 82px #000000,
+            0 0 92px #000000,
+            0 0 102px #000000,
+            0 0 151px #000000;
 }
 
 input {
     padding: 10px;
     box-sizing: border-box;
     width: 100%;
-    border: 1px solid #5f9341;
+    border: 1px solid #810202;
     margin-bottom: 4px;
 }
 
-button {
+#input-btn {
     padding: 10px 20px;
-    background: #5f9341;
+    background: #810202;
     color: white;
     font-weight: bold;
     border: none;
 }
 
-/*
-html, body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+#del-btn {
+    padding: 10px 20px;
+    background: white;
+    color: #810202;
+    font-weight: bold;
+    border: none;
+    border: 1px solid #810202;
 }
 
-#box {
-    cursor: pointer;
-    background: lightseagreen;
-    padding: 40px;
-    width: 200px;
-    text-align: center;
-    margin: 20px auto;
+#save-btn {
+    padding: 10px 20px;
+    background: #810202;
     color: white;
     font-weight: bold;
-}*/
+    border: none;
+}
+
+ul {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+li {
+    margin-top: 5px;
+}
+
+li a {
+    color: #ffffff;
+}
